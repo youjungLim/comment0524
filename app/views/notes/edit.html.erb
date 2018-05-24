@@ -1,0 +1,10 @@
+<h1>글 수정</h1>
+
+<form action='/notes/<%= @note.id %>'>
+<!--<form action='/notes/<%= @note.id %>' method='POST'>-->
+  <input type="hidden" name="_method" value="patch"></input>
+  <input name='authenticity_token' type='hidden' value='<%= @token %>'></input>
+  <p> 제목 :: <input name='edit_title' type='text' value='<%= @note.title %>'></input></p>
+  <p> 내용 :: <textarea name='edit_content'><%= @note.content %></textarea></p>
+  <input type='submit' value='수정'></input>
+</form>

@@ -1,0 +1,9 @@
+<h1>새 글 작성</h1>
+
+<form action='/notes' method='POST'>
+  <input name='authenticity_token' type='hidden' value='<%= @token %>'></input>
+  <p> 제목 :: <input name='input_title' type='text'></input></p>
+  <p> 내용 :: <textarea name='input_content'></textarea></p>
+  <input type='submit' value='작성'></input>
+  <button><a href="/">목록</a></button>
+</form>

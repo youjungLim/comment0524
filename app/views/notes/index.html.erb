@@ -1,0 +1,10 @@
+<h1>글 목록</h1>
+<% @notes.each do |n| %>
+<ul>
+ <li><a href="/notes/<%= n.id %>"><%= n.title %></a></li>
+</ul>
+
+<% end %>
+
+<a href='/notes/new'>새 글</a>
+
